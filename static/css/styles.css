@@ -1,0 +1,69 @@
+body {
+background-color: #333;
+color: white;
+}
+
+a {
+    color: #ffc107;
+}
+
+.jumbotron {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  color: white;
+  background-color: #333;
+}
+
+.space-above {
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.content-div {
+    height: 360px;
+    padding: 30px 10px;
+}
+
+.image-div {
+    height: 360px;
+    padding: 30px 10px;
+}
+
+.cafe-image {
+    float: left;
+    width:  500px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.cafe-name {
+    padding: 10px 0 20px 0;
+    font-size: 40px;
+    margin-top: 0;
+}
+
+p {
+    padding: 5px;
+    font-size: 20px;
+}
+
+.icons {
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 80px;
+}
