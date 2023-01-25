@@ -1,4 +1,7 @@
+import os
+
 from flask import Flask, render_template, request, redirect, url_for
+from flask.cli import load_dotenv
 from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
@@ -7,8 +10,12 @@ from wtforms.validators import DataRequired, URL
 
 app = Flask(__name__)
 
+basedir = os.path.abspath(os.path.dirname(__file__))
+load_dotenv(os.path.join(basedir, '.env'))
+
 # Connect to Database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///cafes.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL') or 'sqlite:///' + os.path.join(basedir,
+                                                                                                      'cafes.db')
 app.config['SECRET_KEY'] = 'RanDomKey'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['DEBUG'] = True
